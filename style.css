@@ -1,0 +1,255 @@
+/*
+Theme Name: Feed Instagram
+Theme URI: http://prueba_tecnica/feed-instagram
+Author: Jesus Jimenez
+Description: Un tema personalizado para mostrar un feed de Instagram.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: feed-instagram
+*/
+
+body {
+    font-family: Arial, sans-serif;
+}
+.search-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: .5rem;
+}
+.instagram-icon{
+    width: 7rem;
+}
+
+.menu-vertical {
+    top: 0;
+    left: 0;
+    width: 200px; 
+    height: 100%;
+    background: #fff; 
+    border-right: 1px solid #ddd; 
+
+}
+
+.menu-vertical.active {
+    display: block; 
+}
+
+.menu-vertical ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-vertical ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-vertical ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+}
+
+#content {
+    flex: 1; 
+}
+
+footer {
+    text-align: center; 
+    padding: 20px; 
+    background-color: #f1f1f1; 
+    border-top: 1px solid #ddd;
+}
+
+.menu-vertical {
+    position: relative;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-text{
+    font-size: .9rem;
+    margin-top: .8rem;
+    margin-left: .2rem;
+}
+
+.search-toggle-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    margin-left: .5rem;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: .7rem;
+}
+
+.search-toggle-checkbox {
+    display: none;
+}
+
+.search-panel {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 86.5vh;
+    background-color: #fff;
+    box-shadow: 1px 0 1px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 20px;
+    transition: right 0.3s ease;
+}
+
+.search-toggle-checkbox:checked + .search-toggle-button + .search-panel {
+    left: 13.5%;
+    display: block;
+}
+
+#search-results {
+    margin-top: 10px;
+}
+
+#search-results div {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#create-post-modal-header {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    height: 70%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+#post-title-header,
+#post-content-header {
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+}
+
+.modal-image {
+    margin: auto;
+    display: flex;
+    margin-bottom: 3rem;
+    width: 10rem !important;
+}
+
+#file-input-header {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+}
+
+#share-button-header {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#share-button-header:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el modal */
+.success-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.success-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px;
+    text-align: center;
+}
+
+.success-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.success-close:hover,
+.success-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.success-modal-icon {
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+}
+
+.success-icon {
+    width: 100%;
+    height: 100%;
+    color: green; 
+}
