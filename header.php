@@ -136,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['media_file'])) {
         $response = wp_remote_post('https://api.airtable.com/v0/appzmB3zBmwWkhnkn/Posts', array(
             'method'    => 'POST',
             'headers'   => array(
-                'Authorization' => 'Bearer patv59bjnbEGUFZG8.cd0546b6e89b9368307894b52c97ef81268d5253071ed72b4d94d955b441b576',
+                'Authorization' => 'Bearer aqui la apikey de quien valla a usar este repo by Jesus Jimenez',
                 'Content-Type'  => 'application/json',
             ),
             'body'      => json_encode(array(
